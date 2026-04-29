@@ -1,22 +1,19 @@
 {
   "version": 2,
-  "name": "void-edge-node",
-  "routes": [
+  "name": "void-edge-gateway",
+  "rewrites": [
     {
-      "src": "^/$",
-      "dest": "/public/index.html"
+      "source": "/",
+      "destination": "/public/index.html"
     },
     {
-      "src": "^/gateway/(.*)",
-      "dest": "/api/core.js"
-    }
-  ],
-  "headers": [
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
     {
       "source": "/(.*)",
-      "headers": [
-        { "key": "x-powered-by", "value": "void-edge" }
-      ]
+      "destination": "/api/index.js"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
