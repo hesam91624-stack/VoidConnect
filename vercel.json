@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "void-edge-node",
+  "routes": [
+    {
+      "src": "^/$",
+      "dest": "/public/index.html"
+    },
+    {
+      "src": "^/gateway/(.*)",
+      "dest": "/api/core.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "x-powered-by", "value": "void-edge" }
+      ]
+    }
+  ]
+}
