@@ -1,13 +1,13 @@
 {
-  "name": "void-edge-node",
-  "version": "0.3.2",
-  "description": "Void lightweight edge gateway",
+
+  "name": "void-net",
+
+  "version": "1.0.0",
+
+  "description": "void-net",
+
   "private": true,
-  "license": "Apache-2.0",
-  "keywords": [
-    "void",
-    "edge",
-    "gateway"
-  ],
-  "author": "Void Systems"
+
+  "license": "MIT"
+
 }
